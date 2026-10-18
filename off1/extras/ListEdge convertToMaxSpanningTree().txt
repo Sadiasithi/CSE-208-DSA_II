@@ -1,0 +1,50 @@
+List<Edge> convertToMaxSpanningTree() {
+        // Calculate the total weight of the minimum spanning tree
+        int mstWeight = 0;
+        for (List<Edge> edges : adjList) {
+            for (Edge edge : edges) {
+                mstWeight += edge.weight;
+            }
+        }
+
+        // Create a priority queue for storing the edges
+        PriorityQueue<Edge> minHeap = new PriorityQueue<>(Comparator.reverseOrder());
+
+        // Select the starting vertex (e.g., vertex 0)
+        boolean[] visited = new boolean[vertices];
+        visited[0] = true;
+
+        // Add all the edges of the starting vertex to the priority queue
+        for (Edge edge : adjList.get(0)) {
+            minHeap.add(edge);
+        }
+
+        // Process the remaining vertices
+        List<Edge> maxSpanningTree = new ArrayList<>();
+        while (!minHeap.isEmpty()) {
+            Edge edge = minHeap.poll();
+
+            // Check if the destination vertex is already visited
+            if (!visited[edge.dest]) {
+                // Add the edge to the MaxST
+                maxSpanningTree.add(edge);
+
+                // Mark the destination vertex as visited
+                visited[edge.dest] = true;
+
+                // Add all the edges of the destination vertex to the priority queue
+                for (Edge nextEdge : adjList.get(edge.dest)) {
+                    minHeap.add(nextEdge);
+                }
+            }
+        }
+
+        // Calculate the total weight of the maximum spanning tree
+        int maxSpanningTreeWeight = 0;
+        for (Edge edge : maxSpanningTree) {
+            maxSpanningTreeWeight += edge.weight;
+        }
+
+        return maxSpanningTree;
+    }
+}

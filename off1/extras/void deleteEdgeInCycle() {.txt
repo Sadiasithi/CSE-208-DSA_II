@@ -1,0 +1,18 @@
+ void deleteEdgeInCycle() {
+        int[] parent = new int[V];
+        Arrays.fill(parent, -1);
+
+        for (int i = 0; i < E; i++) {
+            Edge currentEdge = edges[i];
+            int x = find(parent, currentEdge.src);
+            int y = find(parent, currentEdge.dest);
+
+            if (x == y) {
+                // Removing the edge from the graph
+                currentEdge.src = -1;
+                currentEdge.dest = -1;
+            } else {
+                union(parent, x, y);
+            }
+        }
+    }

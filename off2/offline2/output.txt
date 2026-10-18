@@ -1,0 +1,6 @@
+Bellman Ford Algorithm : 
+Negative weight cycle present
+
+Dijkstra Algorithm:
+0 -> 3 -> 4 -> 5
+60

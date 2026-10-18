@@ -1,0 +1,22 @@
+void deleteNodeFromMST(int nodeToDelete) {
+    List<Edge> edgesToRemove = adjacencyList.get(nodeToDelete);
+
+    // Remove edges connected to the node to delete
+    for (Edge edge : edgesToRemove) {
+        int destination = edge.destination;
+        List<Edge> destinationEdges = adjacencyList.get(destination);
+
+        for (int i = 0; i < destinationEdges.size(); i++) {
+            Edge currentEdge = destinationEdges.get(i);
+
+            if (currentEdge.destination == nodeToDelete) {
+                destinationEdges.remove(i);
+                break;
+            }
+        }
+    }
+
+    // Remove the node itself
+    adjacencyList.remove(nodeToDelete);
+    vertices--;
+}

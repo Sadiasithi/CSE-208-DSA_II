@@ -1,0 +1,60 @@
+Table Size: 5000
+-------------------
+Collision Method: SEPARATE_CHAINING
+Average Probes (Hash1): 5.908
+Total Collisions (Hash1): 4908
+Average Probes (Hash2): 5.933
+Total Collisions (Hash2): 4933
+
+Collision Method: DOUBLE_HASHING
+Average Probes (Hash1): 6.007
+Total Collisions (Hash1): 5007
+Average Probes (Hash2): 5.907
+Total Collisions (Hash2): 4907
+
+Collision Method: CUSTOM_PROBING
+Average Probes (Hash1): 5.947
+Total Collisions (Hash1): 4947
+Average Probes (Hash2): 5.819
+Total Collisions (Hash2): 4819
+
+Table Size: 10000
+-------------------
+Collision Method: SEPARATE_CHAINING
+Average Probes (Hash1): 3.961
+Total Collisions (Hash1): 2961
+Average Probes (Hash2): 3.958
+Total Collisions (Hash2): 2958
+
+Collision Method: DOUBLE_HASHING
+Average Probes (Hash1): 3.819
+Total Collisions (Hash1): 2819
+Average Probes (Hash2): 3.895
+Total Collisions (Hash2): 2895
+
+Collision Method: CUSTOM_PROBING
+Average Probes (Hash1): 3.892
+Total Collisions (Hash1): 2892
+Average Probes (Hash2): 3.863
+Total Collisions (Hash2): 2863
+
+Table Size: 20000
+-------------------
+Collision Method: SEPARATE_CHAINING
+Average Probes (Hash1): 2.864
+Total Collisions (Hash1): 1864
+Average Probes (Hash2): 2.874
+Total Collisions (Hash2): 1874
+
+Collision Method: DOUBLE_HASHING
+Average Probes (Hash1): 2.915
+Total Collisions (Hash1): 1915
+Average Probes (Hash2): 2.886
+Total Collisions (Hash2): 1886
+
+Collision Method: CUSTOM_PROBING
+Average Probes (Hash1): 2.9
+Total Collisions (Hash1): 1900
+Average Probes (Hash2): 2.864
+Total Collisions (Hash2): 1864
+

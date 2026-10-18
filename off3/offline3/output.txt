@@ -1,0 +1,11 @@
+Shortest distance matrix for Matrix Multiplication :
+0 3 4 1 
+5 0 1 6 
+4 7 0 5 
+7 2 3 0 
+
+Shortest distance matrix for floyd warshall :
+0 3 4 1 
+5 0 1 6 
+4 7 0 5 
+7 2 3 0 
